@@ -66,7 +66,7 @@
 
 .lcr--content {
   width: 50%;
-  margin-right: 7rem;
+  margin-right: 8rem;
   font-family: var(--primaryFont);
   font-style: normal;
 }
@@ -87,37 +87,60 @@
 }
 
 .lcr--content p {
-  margin-top: 1rem;
   font-weight: 500;
   font-size: 1.07rem;
   opacity: 0.9;
-
-  display: inline-block;
+  display: block;       /* make each line block-level */
   white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #625d5d; /* cursor */
-
-  /* animate for 10s total: typing (4s) + pause (6s) */
-  width: 0;
-  animation: typing 10s steps(40, end) forwards,
-             blink 0.75s step-end infinite;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
+  overflow: hidden;          
+  line-height: 1.2;     /* adjust line height if you want tighter spacing */
 }
 
-/* typing keyframes: go from 0 to full width, then reset */
-@keyframes typing {
-  0% { width: 0 }
-  40% { width: 100% }   /* typing done at 40% of animation time */
-  90% { width: 100% }   /* hold text till near end */
-  100% { width: 0 }     /* reset to start typing again */
+/* first line typing */
+.lcr--content p.line1 {
+  border-right: 2px solid #625d5d; /* cursor while typing */
+  width: 0ch;
+  margin-top: 4%;  
+  animation: typing1 3s steps(20, end) forwards, removeCursor 0s forwards 3s;
 }
 
-/* blinking cursor stays */
+/* second line typing */
+.lcr--content p.line2 {
+  border-right: 2px solid #625d5d; /* cursor while typing */
+  width: 0ch;
+  opacity: 0;
+  animation:
+    showLine2 0s linear forwards 3s,            /* reveal second line */
+    typing2 3s steps(30, end) forwards 3s,      /* type second line */
+    blink 0.75s step-end infinite 6s;           /* start blinking after typing done */
+}
+
+/* keyframes for typing */
+@keyframes typing1 {
+  from { width: 0ch; }
+  to { width: 18ch; } /* adjust to your first line’s character count */
+}
+
+@keyframes typing2 {
+  from { width: 0ch; }
+  to { width: 29ch; } /* adjust to your second line’s character count */
+}
+
+/* hide cursor (remove border) after typing1 ends */
+@keyframes removeCursor {
+  to { border-right: none; }
+}
+
+/* blink animation for second line */
 @keyframes blink {
-  50% { border-color: transparent }
+  50% { border-color: transparent; }
 }
+
+@keyframes showLine2 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 .lcr-buttonContainer {
   margin-top: 2rem;
@@ -230,12 +253,14 @@
     font-size: 2.5rem;
     text-align: center;
   }
-  .lcr--content p {
-    font-size: 0.95rem;
-    text-align: center;
-    margin: 0 auto;
-    width: 90%;
-  }
+ .lcr--content p {
+  font-size: 0.9rem;       /* slightly smaller for mobile readability */
+  text-align: center;      /* keep text centered */
+  margin: 0 auto;          /* center horizontally */
+  width: 95%;              /* give a bit more width on small screens */
+  line-height: 1.4;        /* better readability on small screens */
+  word-wrap: break-word;   /* wrap long words properly */
+}
   .lcr-buttonContainer {
     margin: 0 auto;
     display: flex;
