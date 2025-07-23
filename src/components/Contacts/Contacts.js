@@ -131,7 +131,7 @@ function Contacts() {
     if (isEmail(email)) {
       emailjs.send(
         'service_bwngfts',   // 🔴 replace with your EmailJS Service ID
-        '__ejs-test-mail-service__',  // 🔴 replace with your EmailJS Template ID
+        'template_dahroxi',  // 🔴 replace with your EmailJS Template ID
         {
           from_name: name,
           from_email: email,
