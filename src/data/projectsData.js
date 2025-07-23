@@ -1,58 +1,53 @@
-import code from "../assets/png/Project/code.png";
-import resume from "../assets/png/Project/resume.png";
-import r2048 from "../assets/png/Project/2048.png";
-import movie from "../assets/png/Project/movie.png";
-import tata from "../assets/png/Project/tata.png";
+import market from "../assets/png/Project/market.png";
+import connect from "../assets/png/Project/connect.png";
+import crypto from "../assets/png/Project/crypto.png";
+import chatbot from "../assets/png/Project/chatbot.png";
+import dice from "../assets/png/Project/dice.png";
 export const projectsData = [
   {
     id: 1,
     projectName: "Market Genius ",
     projectDesc:
       "MarketGenius is an all‑in‑one trading companion designed to help users trade smarter and invest wiser. It offers real‑time market insights, live trade analysis, and interactive dashboards created by industry experts.",
-    tags: ["React.JS", "Tailwind", "Swiggy API"],
-    code: "https://github.com/mjgupta9135/Tatanagar-Treats",
-    demo: "https://tatanagar-treats.web.app/",
-    image: tata,
+    tags: ["Node.js", "Firebase", "real‑time communication technologies"],
+    demo: "https://play.google.com/store/apps/details?id=com.marketgeniusnew.trade",
+    image: market,
   },
   {
     id: 1,
-    projectName: "MoviePedia",
+    projectName: "Y Connect",
     projectDesc:
-      "A comprehensive movie and series database with millions of records, providing detailed information and easy access to extensive media content.",
-    tags: ["React.JS", "SCSS", "TMDB API"],
-    code: "https://github.com/mjgupta9135/MoviePedia",
-    demo: "https://movie-pedia-mj.netlify.app/",
-    image: movie,
+      "Y Connect is a dynamic platform that connects and empowers users through rich content, interactive experiences, and real‑time engagement—all built on secure and scalable technology.",
+    tags: ["Node.js", "Express.js", "Third‑party OTP verification API", "MongoDB"],
+    demo: "https://yconnect.in/",
+    image: connect,
   },
   {
     id: 1,
-    projectName: "Byte Builder",
+    projectName: "SilverBulls – Crypto Trading Platform",
     projectDesc:
-      "An intuitive online code editor allowing seamless execution and testing of code across various programming languages.",
-    tags: ["React.JS", "Tailwind", "Monaco-Editor"],
-    code: "https://github.com/mjgupta9135/Byte_Builders/",
-    demo: "https://byte-builder.netlify.app",
-    image: code,
+      "Silver Bulls is a cutting‑edge trading platform designed for crypto markets, featuring a secure authentication system, seamless integration between frontend and backend, and an intuitive trading interface enhanced with AI‑powered tools and algorithmic trading capabilities.",
+    tags: ["Node.js (with Express.js)", "JWT", "MongoDB", "React.js", "RESTful APIs"],
+    demo: "https://www.silverbulls.io/",
+    image: crypto,
   },
   {
     id: 2,
-    projectName: "Resume Wizard",
+    projectName: "AI-Chatbot",
     projectDesc:
       "A user-friendly tool for creating professional resumes quickly with customizable templates, easy editing, and PDF export.",
-    tags: ["HTML", "CSS", "Javascript"],
-    code: "https://github.com/mjgupta9135/Resume-Builder",
-    demo: "https://resume-wizard-mj.netlify.app/",
-    image: resume,
+    tags: ["React.js ", "CSS", "Javascript", "Node.js", "Gemini API "],
+    demo: "https://ai-chatbot-fpwutdb24-sapna-sharmas-projects-2e05a63a.vercel.app/",
+    image: chatbot,
   },
   {
     id: 3,
-    projectName: "2048 Game",
+    projectName: "Dice Game",
     projectDesc:
       "A fun and addictive puzzle game where players combine tiles to reach the 2048 tile. Simple yet challenging!",
-    tags: ["HTML", "CSS", "Javascript"],
-    code: "https://github.com/mjgupta9135/2048-Game",
-    demo: "https://2048-mj.netlify.app/",
-    image: r2048,
+    tags: ["React", "CSS", "Javascript"],
+    demo: "https://react-project-1-hj0x89cgp-sapna-sharmas-projects-2e05a63a.vercel.app/",
+    image: dice,
   },
 ];
 
