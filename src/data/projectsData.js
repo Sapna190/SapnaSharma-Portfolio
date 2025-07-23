@@ -1,6 +1,6 @@
 import market from "../assets/png/Project/market.png";
 import connect from "../assets/png/Project/connect.png";
-import crypto from "../assets/png/Project/crypto.png";
+import crypto from "../assets/png/Project/silver.png";
 import chatbot from "../assets/png/Project/chatbot.png";
 import dice from "../assets/png/Project/dice.png";
 export const projectsData = [
@@ -25,8 +25,7 @@ export const projectsData = [
   {
     id: 1,
     projectName: "SilverBulls – Crypto Trading Platform",
-    projectDesc:
-      "Silver Bulls is a cutting‑edge trading platform designed for crypto markets, featuring a secure authentication system, seamless integration between frontend and backend, and an intuitive trading interface enhanced with AI‑powered tools and algorithmic trading capabilities.",
+    projectDesc:"Silver Bulls is a cutting‑edge crypto trading platform with secure authentication, seamless frontend‑backend integration, and an intuitive interface powered by AI tools and algorithmic trading.",
     tags: ["Node.js (with Express.js)", "JWT", "MongoDB", "React.js", "RESTful APIs"],
     demo: "https://www.silverbulls.io/",
     image: crypto,
